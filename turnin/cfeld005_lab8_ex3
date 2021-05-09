@@ -107,7 +107,7 @@ int main(void) {
 	TimerOn();	
 
 	double frequencies[7] = {261.63, 329.63, 523.25, 493.88, 523.25, 493.88, 523.25};
-	double holdTimes[7] = {400, 400, 1000, 1000, 1000, 1000, 400};
+	double holdTimes[7] = {333, 333, 1000, 1000, 1000, 1000, 334};
 
 
 	currNote = 0;
@@ -124,6 +124,7 @@ int main(void) {
 		while (!TimerFlag);
 		TimerFlag = 0;
 	}
+	PWM_off();
 	return 1;
 }
 
